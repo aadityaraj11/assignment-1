@@ -1,0 +1,203 @@
+You extract structured metadata from legal rental documents.
+
+FIELD DEFINITIONS:
+- agreement_value: Identify the monetary amount represented as the primary rental/agreement value. Do NOT confuse it with security deposit, advance deposit, maintenance, utilities, penalties, insurance, or other charges.
+- agreement_start_date: Identify the actual commencement/effective date of the agreement. Do NOT automatically return the document execution/signing date.
+- agreement_end_date: Identify the actual expiry/end date of the agreement.
+- renewal_notice_days: Identify the notice period relevant to renewal/termination. Use the full document context.
+- party_one: Identify the first contractual party (usually the owner/lessor).
+- party_two: Identify the second contractual party (usually the tenant/lessee).
+
+Return JSON ONLY. Do not include chain-of-thought. Do not ask to explain reasoning. Do not output prose.
+
+
+EXAMPLE 1:
+DOCUMENT:
+RENTAL AGREEMENT
+This deed of rental agreement executed at Bangalore this fifth day of December 2008 between MR.K.Kuttan S/o Kelu Aehari (Late) residing at site No 152 Geethalayam OMH colong S.M. Road 1st main, T.Dasarahalli, Bangalore-57. Here after called the lessor which term shall where the contest so admits mean and includes his legal heirs representatives executors and assign and Sri. P.M. Narayana Namboodri “Laxmi Leela” ground floor 3rd cross Ayyappa Nagar behind Ayyappa Temple, Jalahalli West, Bangalore - 15 referred as tenant which term shall wherever the context so admits mean and includes his legal heirs representations executors assign witnesses.
+Whereas the lessor is the absolute owner after premises at site No. 8/20 S.M. Road, Jalahalli West, Bangalore - 15 and he has constructed approximate 500 sft area of Ilnd floor with A.C. Sheet roof with power light in the above said premises.
+Where as the owner has offered to let out the premises for non residential purpose, where as the tenant has offered to take the said premises on rent for non residential purpose namely for “MAHALAKSHMI INDUSTRIAL CONSULTANT’ and tenant is the Proprietor of the business and he has agreed to pay rent Rs.4,000.00 (Rupees Four Thousand only) for above said premises with the following terms and conditions:-
+The agreement made only for eleven months from this date of agreement. Fresh agreement with mutual terms and conditions have to be extended (6.p.c is expecting every eleventh month).
+The tenant shall pay the rent above said, on before 10th of each month.
+An advance amount of Rs.35,000/- (Rupees thirty five thousand only) is paid by the tenant to the owner at the time of commencement of this agreement, the receipt where of is hereby acknowledged signing this agreement by the owner. The advance shall not carry any interest and refundable to the tenant at the time of vacating the schedule premises. Any arrears of rent electricity and water dues is permissible to deduct from the advance.
+Each party shall be liable to give three month advance notice for the termination of this agreement.
+The tenant shall pay the electricity and water charges within one week from the date of receipt of the bills.
+the tenant shall at the termination of this agreement have to remove superstructure if any put by the tenant at his own expenses and deliver the possession to the owner in good and tenable condition.
+The tenant shall himself obtain the license for the business top be carried on by him.
+The tenant shall not sublet or underlet the demised portion or any part there of to any third party.
+The building owner shall not in any case be held responsible with for any kind of theft, burglary, fire or accident within the portion of the building.
+All kinds of security arrangements insurances etc., will have to be done by the tenant if necessary.
+The tenant shall keep good relationship with neighbors.
+SIIIDIII
+WITNESSES
+OWNER	TENANT
+1.
+
+TARGET:
+{
+  "agreement_value": "4000",
+  "agreement_start_date": "05.12.2008",
+  "agreement_end_date": "31.11.2009",
+  "renewal_notice_days": "90",
+  "party_one": "MR.K.Kuttan",
+  "party_two": "P.M. Narayana Namboodri"
+}
+
+
+EXAMPLE 2:
+DOCUMENT:
+RENTAL AGREEMENT
+THIS RENTAL AGREEMENT is executed at Chennai - 600 041 on 14th day of July 2010 between Mr. P. JohnsonRavikumar, aged about 43 Years, residing at Plot. No: 10, Door No:3, Jeevanantham Street, Lakshmipuram Tiruvanmiyur, Chennai - 600 041. Which term shall include their heirs, assigns, nominees, hereinafter referred to as “HOUSE OWNER”.
+and
+Mr. Saravanan BV aged about 27 years, residing at Plot. No: 10, Door No:3, Jeevanantham Street, Lakshmipuram Tiruvanmiyur, Chennai - 600 041. Which term shall include their heirs, assigns, nominees, hereinafter referred to as “TENANT”.
+The terms “HOUSE OWNER” and “TENANT” wherever the context so requires or admits shall mean and include their respective heirs, executors, administrators, legal representatives and assigns.
+The HOUSE OWNER is agreed to rent out the own house premises Plot. No: 10, Door No:3, Jeevanantham Street, Lakshmipuram Tiruvanmiyur, Chennai - 600 041 and the TENANT is agreed to occupy the same on paying monthly rent.
+Now the HOUSE OWNER and TENANT hereby AGREE to the following terms and conditions:
+The agreement shall be for a period of 11 months beginning form 01.04.2010 and ending with 30.03.2011.
+The monthly rent, water maintenance charges for the said shall be Rs. 10,000/- (Rupees Ten Thousand only) rent should be paid according to the English calendar month and shall be payable on or before 5th of every succeeding calendar month.
+The tenant has paid the sum of Rs.50, 000/- (Rupees Fifty thousand only) by cash without any interest, and the House Owner has to re-pay the money while the Tenant vacating the house.
+The Tenant shall use the house premises for residential purpose only and not for any other purpose.
+The Tenant shall maintain the leased premises in good condition and repair and deliver the same at the expiry of the lease period or sooner determination of the tenancy. The tenant shall also before delivering up possession together with all the amenities provided by the House owner and the electrical fittings, repair and restore at his cost to their original.
+The Tenant shall not make any alterations or put up any construction in the premises.
+The Tenant shall not sub - let leased premise wholly or partially.
+That the Tenant hereby covenants to pay the electric consumption charges to the electricity board.
+The House Owner and Tenant hereby agree that three months advance notice in writing is essential for the tenant for vacating the premises if he chooses to terminate this agreement during the validity period.
+In witness whereof the house owner and tenant have set their hands and seal the day,
+month and year first above written.
+TENANT
+WITNESSES:
+1.
+
+TARGET:
+{
+  "agreement_value": "10000",
+  "agreement_start_date": "01.04.2010",
+  "agreement_end_date": "30.03.2011",
+  "renewal_notice_days": "90",
+  "party_one": "P. JohnsonRavikumar",
+  "party_two": "Saravanan BV"
+}
+
+
+EXAMPLE 3:
+DOCUMENT:
+RENTAL AGREEMENT
+
+This Rental Agreement made and executed at Bangalore on this 1st day April two thousand
+eleven (01/04/2011), between Prof. K. Parthasarathy, S/o. Late T.S.Krishna lyengar aged about
+75 years, No. 46, Srinivasa, 2" Main Road, Hanumanthanagar, Bangalore-560019, herein after
+called “LESSOR” (which expression shall where-ever the context so requires or permits mean
+
+and include here heirs, executors, administrators and assign) of the FIRST PART.
+AND
+
+Mr. Veerabrahmam Bathini, S/o Mr.Lingaiah Bathini aged about 28 years (Sr. Engineer-PSS
+working at Power Research and Development Consultants, #5, 11'" cross, 2"4 stage, West of
+Chord Road, Bangalore-560086, herein after called “LESSEE” (Tenant) of the SECOND PART.
+
+WITNESSETH AS FOLLOWS:
+
+1. The Lessor hereby covenants with Lessee and warrants that he is the owner and as
+such as the right and the authority to lease the First Floor of premises No. 146, Krishna
+Krupa, 3 Cross, 1st Main, VHBCSL Layout, West of Chord Road, Bangalore-560086.
+
+2. The Lessor hereby agrees to let to the Lessee the First Floor of the premises, No. 146,
+Krishna Krupa, 3'¢ Cross, 1s* Main, VHBCSL Layout, West of Chord Road, Bangalore-
+
+560086 on the following terms conditions.
+
+3. The Lessee will pay the Lessor for the premises herein described in the schedule, a
+monthly rent of Rs.8,000/- (Ruppes eight thousand only). The rent shall be paid on or
+before 10" of each calendar month without deductions whatsoever. If the Lessee fails to
+pay the monthly rent in time, the Lessor shall have the liberty to resume the schedule
+
+premises without re-course to any action, legal or other wise.
+
+4. The Lessee shall not pay any advance to the premises.
+
+5. This rental agreement shall be valid for a period of twelve months, from the date of
+
+execution and subject to renewal on expiry of the above lease period on execution of
+
+fresh LEASE-DEED on mutual consent.
+6. Under no circumstances, the schedule premises shall be sublet or underlet to any one
+
+else but shall be used by lessee for his bonafide residence only.
+
+7. The Lessee undertakes the full responsibility for the payment of all electric and water
+
+charges and receipts retained for record.
+
+8. Additions or alterations shall not be made to th existing structure without written consent
+from the Lessor.
+
+9. If any damage is caused to the schedule premises, the same shall be got repaired by the
+Lessee at his own cost.
+
+10. The Lessee upon termination of this agreement will peacefully and quietly leave to the
+Lessor the possession of the said premises together with the fixtures and fittings as
+given below in substantially same condition by the lessee except for the normal wear and
+tear.
+
+11. The Lessor or his authorized agent shall be permitted to enter schedule premises at all
+
+reasonable hours to inspect the same for its wear and tear.
+12. Both the parties agree that this lease agreement may be terminated by the Lessee by
+giving three months notice in writing.
+SCHEDULE
+The first floor of the No. 146, VHBCSL Layout, 3 cross, 1st Main, Bangalore-560086 bounded
+by
+East by 147 and North by 161
+
+West by Road and South by Road
+
+JANTNEXERRE LESSOR
+
+Fouf nu@dilerg Tano48”
+nurnerEuhepean closet
+nuntberé/eabtbasiawith
+Johnaoimake) 150
+ltrs koréaheragey$en(25 Itrs)--
+nos. Solar water heater
+
+6. Tube lights
+
+IN WITNESS WHEREOF the Lessor and Lessee have affixed their signature to this rental
+
+agreement on the day, month and the year first above written.
+
+LESSEE
+
+TARGET:
+{
+  "agreement_value": "5500",
+  "agreement_start_date": "21.04.2011",
+  "agreement_end_date": "19.02.2012",
+  "renewal_notice_days": "60",
+  "party_one": "Asha Ramesh & Ramesh K.N",
+  "party_two": "Sadasivuni Deepthi & Sadasivuni Kiran"
+}
+
+
+NEW DOCUMENT:
+RENTAL AGREEMENT
+This deed of rental agreement executed at Bangalore this fifth day of December 2008 between MR.K.Kuttan S/o Kelu Aehari (Late) residing at site No 152 Geethalayam OMH colong S.M. Road 1st main, T.Dasarahalli, Bangalore-57. Here after called the lessor which term shall where the contest so admits mean and includes his legal heirs representatives executors and assign and Sri. P.M. Narayana Namboodri “Laxmi Leela” ground floor 3rd cross Ayyappa Nagar behind Ayyappa Temple, Jalahalli West, Bangalore - 15 referred as tenant which term shall wherever the context so admits mean and includes his legal heirs representations executors assign witnesses.
+Whereas the lessor is the absolute owner after premises at site No. 8/20 S.M. Road, Jalahalli West, Bangalore - 15 and he has constructed approximate 500 sft area of Ilnd floor with A.C. Sheet roof with power light in the above said premises.
+Where as the owner has offered to let out the premises for non residential purpose, where as the tenant has offered to take the said premises on rent for non residential purpose namely for “MAHALAKSHMI INDUSTRIAL CONSULTANT’ and tenant is the Proprietor of the business and he has agreed to pay rent Rs.4,000.00 (Rupees Four Thousand only) for above said premises with the following terms and conditions:-
+The agreement made only for eleven months from this date of agreement. Fresh agreement with mutual terms and conditions have to be extended (6.p.c is expecting every eleventh month).
+The tenant shall pay the rent above said, on before 10th of each month.
+An advance amount of Rs.35,000/- (Rupees thirty five thousand only) is paid by the tenant to the owner at the time of commencement of this agreement, the receipt where of is hereby acknowledged signing this agreement by the owner. The advance shall not carry any interest and refundable to the tenant at the time of vacating the schedule premises. Any arrears of rent electricity and water dues is permissible to deduct from the advance.
+Each party shall be liable to give three month advance notice for the termination of this agreement.
+The tenant shall pay the electricity and water charges within one week from the date of receipt of the bills.
+the tenant shall at the termination of this agreement have to remove superstructure if any put by the tenant at his own expenses and deliver the possession to the owner in good and tenable condition.
+The tenant shall himself obtain the license for the business top be carried on by him.
+The tenant shall not sublet or underlet the demised portion or any part there of to any third party.
+The building owner shall not in any case be held responsible with for any kind of theft, burglary, fire or accident within the portion of the building.
+All kinds of security arrangements insurances etc., will have to be done by the tenant if necessary.
+The tenant shall keep good relationship with neighbors.
+SIIIDIII
+WITNESSES
+OWNER	TENANT
+1.
+
+Remember: RETURN JSON ONLY matching the metadata schema exactly.

@@ -1,0 +1,41 @@
+{
+  "provider": "Gemini REST",
+  "model": "gemini-3.5-flash-lite",
+  "total_api_calls": 9,
+  "successful_calls": 9,
+  "failed_calls": 0,
+  "invalid_json_responses": 0,
+  "macro_average_recall": 48.15,
+  "fields": {
+    "agreement_value": {
+      "correct": 4,
+      "total": 9,
+      "recall_percent": 44.44
+    },
+    "agreement_start_date": {
+      "correct": 6,
+      "total": 9,
+      "recall_percent": 66.67
+    },
+    "agreement_end_date": {
+      "correct": 3,
+      "total": 9,
+      "recall_percent": 33.33
+    },
+    "renewal_notice_days": {
+      "correct": 6,
+      "total": 9,
+      "recall_percent": 66.67
+    },
+    "party_one": {
+      "correct": 4,
+      "total": 9,
+      "recall_percent": 44.44
+    },
+    "party_two": {
+      "correct": 3,
+      "total": 9,
+      "recall_percent": 33.33
+    }
+  }
+}

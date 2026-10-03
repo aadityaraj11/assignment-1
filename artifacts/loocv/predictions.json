@@ -1,0 +1,74 @@
+{
+  "6683127-House-Rental-Contract-GERALDINE-GALINATO-v2-Page-1": {
+    "agreement_value": "6500",
+    "agreement_start_date": "20.05.2007",
+    "agreement_end_date": "20.05.2008",
+    "renewal_notice_days": "15",
+    "party_one": "Antonio Levy S. Ingles, Jr. and/or Mary Rose C. Ingles",
+    "party_two": "GERALDINE O. GALINATO"
+  },
+  "6683129-House-Rental-Contract-Geraldine-Galinato-v2": {
+    "agreement_value": "6500",
+    "agreement_start_date": "20.05.2007",
+    "agreement_end_date": "20.05.2008",
+    "renewal_notice_days": "15",
+    "party_one": "Antonio Levy S. Ingles, Jr. and/or Mary Rose C. Ingles",
+    "party_two": "GERALDINE Q. GALINATO"
+  },
+  "18325926-Rental-Agreement-1": {
+    "agreement_value": "4000.00",
+    "agreement_start_date": "05.12.2008",
+    "agreement_end_date": "04.11.2009",
+    "renewal_notice_days": "90",
+    "party_one": "MR.K.Kuttan",
+    "party_two": "Sri. P.M. Narayana Namboodri"
+  },
+  "36199312-Rental-Agreement": {
+    "agreement_value": "38000",
+    "agreement_start_date": "01.05.2010",
+    "agreement_end_date": "31.03.2011",
+    "renewal_notice_days": "30",
+    "party_one": "Mr. Balaji.R",
+    "party_two": "Mr. Kartheek R"
+  },
+  "44737744-Maddireddy-Bhargava-Reddy-Rental-Agreement": {
+    "agreement_value": "999.79",
+    "agreement_start_date": null,
+    "agreement_end_date": null,
+    "renewal_notice_days": null,
+    "party_one": "M. V, V\u00ab VI JAY A SHANKAR",
+    "party_two": "MADDIREDDY BHARGAVA REDDY"
+  },
+  "47854715-RENTAL-AGREEMENT": {
+    "agreement_value": "9000",
+    "agreement_start_date": "01.04.2010",
+    "agreement_end_date": "28.02.2011",
+    "renewal_notice_days": "30",
+    "party_one": "P C Mathew",
+    "party_two": "L Gopinath"
+  },
+  "50070534-RENTAL-AGREEMENT": {
+    "agreement_value": "10000",
+    "agreement_start_date": "01.04.2010",
+    "agreement_end_date": "30.03.2011",
+    "renewal_notice_days": "90",
+    "party_one": "P. JohnsonRavikumar",
+    "party_two": "Saravanan BV"
+  },
+  "54770958-Rental-Agreement": {
+    "agreement_value": "5500",
+    "agreement_start_date": "20.04.2011",
+    "agreement_end_date": "19.03.2012",
+    "renewal_notice_days": "60",
+    "party_one": "Mrs.Asha Ramesh & Mr.Ramesh. K.N.",
+    "party_two": "Mrs.Sadasivuni Deepti & Mr.Sadasivuni Kiran"
+  },
+  "54945838-Rental-Agreement": {
+    "agreement_value": "8000",
+    "agreement_start_date": "01.04.2011",
+    "agreement_end_date": "31.03.2012",
+    "renewal_notice_days": "90",
+    "party_one": "K. Parthasarathy",
+    "party_two": "Veerabrahmam Bathini"
+  }
+}
